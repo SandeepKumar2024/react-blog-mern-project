@@ -1,0 +1,75 @@
+.edit-post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    min-height: 100vh;
+  
+    .edit-post-container {
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 600px;
+  
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+        font-size: 1.8rem;
+      }
+  
+      form {
+        display: flex;
+        flex-direction: column;
+  
+        .form-group {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 15px;
+  
+          label {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 5px;
+          }
+  
+          input,
+          textarea {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            outline: none;
+            transition: border-color 0.3s;
+  
+            &:focus {
+              border-color: #667eea;
+            }
+          }
+  
+          textarea {
+            resize: vertical;
+          }
+        }
+  
+        .save-button {
+          background: #667eea;
+          color: #fff;
+          padding: 10px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 1rem;
+          transition: background-color 0.3s;
+  
+          &:hover {
+            background: #764ba2;
+          }
+        }
+      }
+    }
+  }
+  

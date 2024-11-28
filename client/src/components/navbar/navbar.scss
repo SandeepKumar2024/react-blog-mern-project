@@ -1,0 +1,114 @@
+@use "sass:math";
+
+.navbar {
+  position: sticky; // Enables the sticky behavior
+  top: 0; // Sticks the navbar to the top of the viewport
+  width: 100%; // Ensures the navbar spans the full width
+  height: 50px; // Adjusted height for better visibility
+  display: flex;
+  justify-content: space-between;
+  align-items: center; // Centers items vertically
+  padding: 10px 20px; // Adds spacing inside the navbar
+  background-color: #ffffff; // Background color for better visibility
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Subtle shadow for depth
+  z-index: 1000; // Ensures it stays above other content
+  margin-bottom: 20px;
+
+  .left {
+    display: flex;
+    align-items: center;
+
+    span {
+      color: rgb(5, 1, 5);
+      font-weight: bold;
+      font-size: 18px;
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      background-color: yellow;
+      padding: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center; // Centers text within the circle
+    }
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    span {
+      color: rgb(12, 10, 10);
+      cursor: pointer;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: rgb(66, 66, 105); // Changes color on hover
+      }
+    }
+
+    .login {
+      background-color: rgb(162, 193, 240);
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: rgb(120, 160, 220); // Darker shade on hover
+      }
+    }
+  }
+
+  // Responsive design adjustments
+  @media (max-width: 768px) {
+    height: 60px; // Slightly taller navbar for better touch targets
+    padding: 10px;
+
+    .right {
+      gap: 15px;
+
+      span {
+        font-size: 14px;
+      }
+
+      .login {
+        padding: 4px 8px;
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    height: auto; // Allow height to adjust based on content
+    padding: 15px;
+
+    .left {
+      margin-bottom: 10px; // Add spacing between sections
+
+      span {
+        font-size: 16px;
+        height: 25px;
+        width: 25px;
+      }
+    }
+
+    .right {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+
+      span {
+        font-size: 12px;
+      }
+
+      .login {
+        padding: 3px 6px;
+        font-size: 0.85rem;
+      }
+    }
+  }
+}
